@@ -559,29 +559,28 @@ declare module powerbi {
         values: PrimitiveValue[];
         highlights?: PrimitiveValue[];
         identity?: visuals.CustomVisualOpaqueIdentity;
-    }
 
-    // NOTE: The following is needed for backwards compatibility and should be deprecated.  Callers should use
-    // DataViewMetadataColumn.aggregates instead.
-    export interface DataViewValueColumn extends DataViewColumnAggregates {
+        // NOTE: The following is needed for backwards compatibility and should be deprecated.  
+        // Callers should use DataViewMetadataColumn.aggregates instead.
+        // The values below extend from 'DataViewColumnAggregates'.
         /** @deprecated Callers should use DataViewMetadataColumn.aggregates instead. */
         subtotal?: PrimitiveValue;
-        
+
         /** @deprecated Callers should use DataViewMetadataColumn.aggregates instead. */
         max?: PrimitiveValue;
-        
+
         /** @deprecated Callers should use DataViewMetadataColumn.aggregates instead. */
         min?: PrimitiveValue;
-        
+
         /** @deprecated Callers should use DataViewMetadataColumn.aggregates instead. */
         average?: PrimitiveValue;
-        
+
         /** @deprecated Callers should use DataViewMetadataColumn.aggregates instead. */
         median?: PrimitiveValue;
-        
+
         /** @deprecated Callers should use DataViewMetadataColumn.aggregates instead. */
         count?: number;
-        
+
         /** @deprecated Callers should use DataViewMetadataColumn.aggregates instead. */
         percentiles?: DataViewColumnPercentileAggregate[];
 
